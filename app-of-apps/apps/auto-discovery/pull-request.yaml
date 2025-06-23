@@ -27,11 +27,11 @@ spec:
                       owner: '{{ .organization }}'
                       repo: '{{ regexReplaceAll "-deployment$" .repository "" }}'
                       tokenRef:
-                        secretName: github-token
+                        secretName: ci-cd-token
                         key: token
                       labels:
                         - preview
-                    requeueAfterSeconds: 1800 # TODO: Configure webhook to trigger this
+                    requeueAfterSeconds: 180 # TODO: Configure webhook to trigger this
           - clusters:
               selector:
                 matchExpressions:
