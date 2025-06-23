@@ -39,7 +39,7 @@ spec:
                     operator: In
                     values:
                       - sandbox
-                      - local # TODO: Remove
+                      # - local # TODO: Remove
 
   template:
     metadata:
