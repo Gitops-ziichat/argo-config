@@ -27,7 +27,7 @@ kubectl label -n argocd secret repo-creds "argocd.argoproj.io/secret-type=repo-c
 Argo CD will be polling repositories for pull requests that need preview environments. We need to create a secret to allow Argo CD to authenticate with GitHub to access private repos and bypass rate limits for public repos:
 
 ```sh
-kubectl create -n argocd secret generic github-token \
+kubectl create -n argocd secret generic cicd-token \
   --from-literal=token="github_pat_XXX"
 ```
 
@@ -42,7 +42,7 @@ We also need to create a secret to allow Argo CD notifications to call the GitHu
 ```sh
 kubectl delete -n argocd secret argocd-notifications-secret
 kubectl create -n argocd secret generic argocd-notifications-secret \
-  --from-literal=github-token="github_pat_XXX"
+  --from-literal=cicd-token="github_pat_XXX"
 ```
 
 ### Image Updater

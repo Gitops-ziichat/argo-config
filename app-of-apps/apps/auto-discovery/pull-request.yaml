@@ -16,7 +16,7 @@ spec:
                     github:
                       organization: Gitops-ziichat
                       tokenRef:
-                        secretName: github-token
+                        secretName: cicd-token
                         key: token
                     filters:
                       - repositoryMatch: '.+-deployment$'
