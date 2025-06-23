@@ -16,7 +16,7 @@ spec:
                     github:
                       organization: Gitops-ziichat
                       tokenRef:
-                        secretName: github-token
+                        secretName: CICD_TOKEN
                         key: token
                     filters:
                       - repositoryMatch: '.+-addon$'

@@ -27,7 +27,7 @@ spec:
                       owner: '{{ .organization }}'
                       repo: '{{ regexReplaceAll "-deployment$" .repository "" }}'
                       tokenRef:
-                        secretName: ci-cd-token
+                        secretName: CICD_TOKEN
                         key: token
                       labels:
                         - preview
