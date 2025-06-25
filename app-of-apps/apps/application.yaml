@@ -5,11 +5,15 @@ metadata:
   name: apps
   labels:
     argocd.argoproj.io/type: AoA
+  annotations:
+    notifications.argoproj.io/subscribe.on-deployed.discord: alerts
+    notifications.argoproj.io/subscribe.on-sync-failed.discord: alerts
+    notifications.argoproj.io/subscribe.on-sync-succeeded.discord: alerts  
   namespace: argocd
 spec:
   project: default
   source:
-    repoURL: https://github.com/Gitops-ziichat/argo-config.git
+    repoURL: https://github.com/gitops-ziichat/argo-config.git
     targetRevision: HEAD
     path: app-of-apps/apps/auto-discovery
   destination:
