@@ -7,9 +7,9 @@ metadata:
     argocd.argoproj.io/type: AoA
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.on-deployed.discord: alerts
-    notifications.argoproj.io/subscribe.on-sync-failed.discord: alerts
-    notifications.argoproj.io/subscribe.on-sync-succeeded.discord: alerts
+    notifications.argoproj.io/subscribe.on-app-health-degraded.discord: alerts
+    notifications.argoproj.io/subscribe.on-created.discord: alerts
+    notifications.argoproj.io/subscribe.on-sync-running.discord: alerts
 spec:
   project: default
   sources:
