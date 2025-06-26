@@ -7,9 +7,13 @@ metadata:
     argocd.argoproj.io/type: AoA
   namespace: argocd
   annotations:
-    notifications.argoproj.io/subscribe.app-sync-running.discord: alerts
-    notifications.argoproj.io/subscribe.app-sync-failed.discord: alerts
     notifications.argoproj.io/subscribe.sync-operation-change.discord: alerts
+    notifications.argoproj.io/subscribe.app-created.discord: alerts
+    notifications.argoproj.io/subscribe.app-deleted.discord: alerts
+    notifications.argoproj.io/subscribe.app-health-degraded.discord: alerts
+    notifications.argoproj.io/subscribe.app-sync-failed.discord: alerts
+    notifications.argoproj.io/subscribe.app-sync-status-unknown.discord: alerts
+    notifications.argoproj.io/subscribe.app-sync-succeeded.discord: alerts
 spec:
   project: default
   sources:
