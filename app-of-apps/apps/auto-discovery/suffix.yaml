@@ -23,7 +23,7 @@ spec:
                         pathsExist:
                           - base/kustomization.yaml
                 - git:
-                    repoURL: 'https://github.com/{{ .organization }}/{{ .repository }}.git'
+                    repoURL: 'https://github.com/{{ .organization }}/{{ .repository }}'
                     revision: HEAD
                     files:
                       - path: 'overlays/**/kustomization.yaml'
